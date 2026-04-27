@@ -1,6 +1,6 @@
 {
 	"name": "rand-var-name",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Random JS variable name",
 	"author": "bddjr",
 	"license": "Unlicense",
@@ -18,6 +18,13 @@
 		"test": "node --run build && node test.mjs",
 		"prepublishOnly": "node --run test"
 	},
+	"keywords": [
+		"rand",
+		"random",
+		"var",
+		"variable",
+		"name"
+	],
 	"devDependencies": {
 		"typescript": "^6.0.3"
 	}
