@@ -9,6 +9,10 @@
 	"files": [
 		"dist"
 	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/bddjr/rand-var-name.git"
+	},
 	"scripts": {
 		"build": "tsc",
 		"test": "node --run build && node test.mjs",
