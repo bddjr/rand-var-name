@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "declaration": true,
+    "strict": true,
+    "rootDir": ".",
+    "outDir": "dist"
+  },
+  "include": ["main.ts"]
+}
