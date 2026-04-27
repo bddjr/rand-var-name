@@ -1,4 +1,4 @@
-const charCodeMap = new TextEncoder().encode('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_$')
+const charCodeMap = new TextEncoder().encode('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_$0123456789')
 
 // if (charCodeMap.length !== 64) throw Error(`charCodeMap.length !== 64`);
 
@@ -37,7 +37,7 @@ export function randWithoutPrefix(length = 8): string {
  * Returns format "_XXXXXXXX"
  */
 export function randBytesWithoutPrefix(length = 8): Uint8Array<ArrayBuffer> {
-    return _rand(length, charCodeMap[10 + Math.trunc(Math.random() * 54)])
+    return _rand(length, charCodeMap[Math.trunc(Math.random() * 54)])
 }
 
 const randVarName = {
