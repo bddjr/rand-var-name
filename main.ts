@@ -3,11 +3,11 @@ const charCodeMap = new TextEncoder().encode('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefgh
 // if (charCodeMap.length !== 64) throw Error(`charCodeMap.length !== 64`);
 
 function _rand(length: number, firstByte: number): Uint8Array<ArrayBuffer> {
-    Number.isSafeInteger(length = Math.trunc(length)) || (length = 0)
-    const b = new Uint8Array(length)
+    const b = new Uint8Array(+length)
+    length = b.length
     b[0] = firstByte
     for (let i = 1; i < length;) {
-        b[i++] = charCodeMap[Math.trunc(Math.random() * 64)]
+        b[i++] = charCodeMap[Math.floor(Math.random() * 64)]
     }
     return b
 }
@@ -37,7 +37,7 @@ export function randWithoutPrefix(length = 8): string {
  * Returns format "_XXXXXXXX"
  */
 export function randBytesWithoutPrefix(length = 8): Uint8Array<ArrayBuffer> {
-    return _rand(length, charCodeMap[Math.trunc(Math.random() * 54)])
+    return _rand(length, charCodeMap[Math.floor(Math.random() * 54)])
 }
 
 const randVarName = {
