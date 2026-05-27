@@ -1,17 +1,17 @@
-import randVarName from './dist/main.js'
+import { randVarName } from './dist/main.js'
 
 for (let i = 0; i < 3; i++) {
-    console.log(randVarName.rand())
+    console.log(randVarName())
 }
 for (let i = 0; i < 3; i++) {
-    console.log(randVarName.rand(17))
+    console.log(randVarName({ length: 16 }))
 }
 
 console.log()
 
 for (let i = 0; i < 3; i++) {
-    console.log(randVarName.randWithoutPrefix())
+    console.log(randVarName({ prefix: '_' }))
 }
 for (let i = 0; i < 3; i++) {
-    console.log(randVarName.randWithoutPrefix(16))
+    console.log(randVarName({ prefix: '_', length: 17 }))
 }

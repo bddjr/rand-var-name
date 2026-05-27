@@ -1,15 +1,15 @@
 Random JS variable name
 
 ```
-npm i rand-var-name
+npm i rand-var-name@latest
 ```
 
 ```js
-import randVarName from 'rand-var-name'
+import { randVarName } from 'rand-var-name'
 
-console.log(randVarName.rand())   // "_OVo_sUv6"
-console.log(randVarName.rand(17)) // "_oBNrxhh3x4llMq$x"
+console.log(randVarName()) // "Xf4$9f_o"
+console.log(randVarName({ length: 16 })) // "m_Gy$NhhCtoObLsE"
 
-console.log(randVarName.randWithoutPrefix())   // "xoEg5ZsI"
-console.log(randVarName.randWithoutPrefix(16)) // "oBO$81zfg2XxzVVx"
+console.log(randVarName({ prefix: '_' })) // "_Unrk9NW5"
+console.log(randVarName({ prefix: '_', length: 17 })) // "_a6$nDajLBRLWsZU0"
 ```
